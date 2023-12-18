@@ -1,0 +1,75 @@
+[
+    {
+        "name": "고소미",
+        "price": 15000,
+        "description": "오리온 고소미",
+        "image": "/images/고소미_15.webp"
+    },
+    {
+        "name": "두부김치찌개",
+        "price": 22000,
+        "description": "비비고 두부 김치찌개",
+        "image": "/images/두부김치찌개_22.webp"
+    },
+    {
+        "name": "물냉면",
+        "price": 15000,
+        "description": "청수 물냉면",
+        "image": "/images/물냉면_15.webp"
+    },
+    {
+        "name": "바나나맛우유",
+        "price": 12000,
+        "description": "빙그레 바나나맛 우유",
+        "image": "/images/바나나맛우유_12.webp"
+    },
+    {
+        "name": "불닭떡볶이",
+        "price": 15000,
+        "description": "까르보 불닭떡복이",
+        "image": "/images/불닭떡복이_15.webp"
+    },
+
+    {
+        "name": "뻥이요",
+        "price": 10000,
+        "description": "허니 뻥이요",
+        "image": "/images/뻥이요_10.webp"
+    },
+    {
+        "name": "육수한알",
+        "price": 22000,
+        "description": "착한 상점 육수한알",
+        "image": "/images/육수한알_22.webp"
+    },
+    {
+        "name": "전복죽",
+        "price": 10000,
+        "description": "본죽 버섯전복죽",
+        "image": "/images/전복죽_10.webp"
+    },
+    {
+        "name": "진라면",
+        "price": 24000,
+        "description": "농심 진라면 박스",
+        "image": "/images/진라면_24.webp"
+    },
+    {
+        "name": "짜파구리",
+        "price": 23000,
+        "description": "농심 짜파구리 컵라면",
+        "image": "/images/짜파구리_23.jpg"
+    },
+    {
+        "name": "청파래 김",
+        "price": 14000,
+        "description": "해우촌 청파래 김",
+        "image": "/images/청파래김_15.jpg"
+    },
+    {
+        "name": "달고나 아몬드",
+        "price": 21000,
+        "description": "두유노 달고나 아몬드 ",
+        "image": "/images/달고나아몬드_20.jpg"
+    }
+]

@@ -1,0 +1,6 @@
+test.ipynb
+migrations/**
+test_queries.sql
+.env
+.vscode
+alembic.ini

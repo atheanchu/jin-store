@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Jin Store{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<!-- Page Content-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {% for item in items %}
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <picture class="mx-auto">
+                        <source srcset="{{ url_for('static', path=item.image) }}" type="image/webp" />
+                        <img src="{{item.image}}" class="img-thumbnail img-fluid" style="height:300px; width:450"
+                            alt="Item Image">
+                    </picture>
+                    <!-- <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." /> -->
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{ item.name }}</h5>
+                            <!-- Product price-->
+                            {{ item.price }}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                onClick="createOrder('{{ item.id }}')" href="#">
+                                <!-- data-bs-toggle="modal" data-bs-target="#exampleModal"  -->
+                                Order Now</a></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">주문완료!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    주문이 완료되었습니다!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <!-- <button type="button" class="btn btn-primary">상세보기</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{{ url_for('static', path='/js/utils.js') }}" crossorigin="anonymous"></script>
+{% endblock %}

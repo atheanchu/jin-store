@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Jin Store - Orders{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div class="container px-4 px-lg-5 mt-5">
+    <h1>All Orders</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Order Id</th>
+                <th scope="col">User</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <th scope="row">{{ order.id }}</th>
+                <td>{{ order.username }}</td>
+                <td>{{ order.item_name }}</td>
+                <td>{{ order.order_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
