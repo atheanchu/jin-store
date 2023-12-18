@@ -6,10 +6,11 @@ from typing import Optional
 
 load_dotenv()
 
+db_url = os.getenv("DATABASE_URL")
 db_user = os.getenv("DATABASE_USER")
 db_password = os.getenv("DATABASE_PASSWORD")
 # DATABASE_URL = f"postgresql://{db_user}:{db_password}@127.0.0.1/moomarket"
-DATABASE_URL = f"postgresql://{db_user}:{db_password}@host.docker.internal/moomarket"
+DATABASE_URL = f"postgresql://{db_user}:{db_password}@{db_url}/moomarket"
 
 
 engine_url = create_engine(DATABASE_URL, echo=True)
